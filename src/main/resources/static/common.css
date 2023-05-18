@@ -1,0 +1,65 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+}
+
+h1{
+    margin: 0;
+}
+
+.cont1{
+    margin-top: 20px;
+}
+
+tr{
+    height: 35px;
+}
+
+.bg-text{
+    background-color: darkgrey;
+    color: darkgoldenrod;
+}
+
+.css-table{
+    border:1px solid black;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+.css-table-head{
+    background-color: dimgrey;
+    color:goldenrod;
+    height: 2rem;
+}
+
+.btn-buy{
+    background-color: darkgreen;
+    color: white;
+    border-radius: 15px;
+}
+
+.td-btn-buy{
+    width: 100px;
+    background-color: dimgrey;
+}
+
+.btn_nav{
+    background-color: dimgrey;
+    height: 80%;
+    width: 60px;
+    color: white;
+    border: 1px solid black;
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
