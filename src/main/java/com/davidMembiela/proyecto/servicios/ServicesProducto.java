@@ -27,15 +27,26 @@ public class ServicesProducto implements iServiceProducto {
     }
 
     @Override
+    public Producto findById(int id) {
+
+        return repositoryProducto.findById(id);
+    }
+
+    @Override
     public void deleteProduct(int id) {
         repositoryProducto.deleteProducto(id);
     }
 
 
     @Override
-    public void editProduct(Producto producto) {
-        repositoryProducto.editProducto(producto);
+    public void editProduct(int id, String nombre, double precio) {
+        repositoryProducto.editProducto(nombre, precio, id);
     }
+
+    public Boolean existsProductobyId(Producto producto){
+        return repositoryProducto. existsProductobyId(producto.getId());
+    }
+
 
 
 }

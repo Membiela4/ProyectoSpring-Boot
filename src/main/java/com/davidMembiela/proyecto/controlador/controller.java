@@ -62,15 +62,12 @@ public class controller {
         servicesProducto.deleteProduct(id);
         return new RedirectView("/productos");
     }
-    /*
 
-
-    @PostMapping("/productos")
-    public RedirectView editProducto(@ModelAttribute("producto") Producto producto, Model model) {
-        servicesProducto.deleteProduct(producto);
-        return new RedirectView("/productos");
+    @PostMapping("/productos/modify/{id}")
+    public String editarProducto(@PathVariable int id, @RequestParam("nombre") String nombre, @RequestParam("precio") double precio) {
+        servicesProducto.editProduct(id, nombre, precio);
+        return "redirect:/productos";
     }
-    */
 
 
 }
