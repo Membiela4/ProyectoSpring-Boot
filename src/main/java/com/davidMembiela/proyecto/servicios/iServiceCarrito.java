@@ -12,4 +12,6 @@ public interface iServiceCarrito {
     List<Producto> getProducts(Carrito c);
 
     public double totalPrice(Carrito c);
+
+    public void agregarAlCarrito(int id);
 }

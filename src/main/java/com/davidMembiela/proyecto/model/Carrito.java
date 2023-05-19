@@ -27,5 +27,14 @@ public class Carrito {
             inverseJoinColumns = @JoinColumn(name = "produtoes_id"))
     private Set<Producto> produtoes = new LinkedHashSet<>();
 
+
+    public Set<Producto> getProductoes() {
+        return produtoes;
+    }
+
+    public void setProductoes(Set<Producto> produtoes) {
+        this.produtoes = produtoes;
+    }
+
 }
 

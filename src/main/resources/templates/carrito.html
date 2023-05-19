@@ -1,0 +1,21 @@
+<<!html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Carrito</title>
+</head>
+<body>
+<h1>Carrito de compras</h1>
+
+<table>
+  <tr>
+    <th>Producto</th>
+    <th>Precio</th>
+  </tr>
+  <tr th:each="producto : ${carrito.productoes}">
+    <td th:text="${producto.nombre}"></td>
+    <td th:text="${producto.precio}"></td>
+  </tr>
+</table>
+</body>
+</html>
