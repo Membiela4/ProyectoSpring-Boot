@@ -1,0 +1,197 @@
+// Definición de variables
+$azul-principal: #4FAAFF;
+$blanco-principal: #FFFFFF;
+$amarillo-principal: #FFD34F;
+$azul-claro:#cefff6;
+
+// Mixin para centrar elementos horizontalmente y verticalmente
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Mixin para media queries
+@mixin media-query($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: $azul-principal;
+  height: 80px;
+  @include center;
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+
+    .logo {
+      a {
+        font-size: 24px;
+        font-weight: bold;
+        color: $amarillo-principal;
+        text-decoration: none;
+      }
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+
+      li {
+        margin-left: 10px;
+
+        a {
+          font-size: 16px;
+          color: $amarillo-principal; 
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+h1.titulo {
+  font-size: 32px;
+  @include center;
+  margin-top: 20px;
+}
+
+.registro-producto {
+  display: flex;
+  flex-direction: column;
+  @include center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  .botonregistrar {
+    border: none;
+    border-radius: 5px;
+    background-color: $amarillo-principal;
+    color: black;
+    padding: 5px;
+    margin: 0;
+    text-decoration: none;
+  }
+}
+
+
+// Estilos de la tabla
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+}
+
+// Estilos de los botones
+.boton {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $azul-principal;
+  }
+}
+
+// Estilos de los enlaces
+.enlace {
+  text-decoration: none;
+}
+
+.enlaceCarrito {
+  margin-top: 300px;
+}
+
+.boton {
+  border: none;
+  border-radius: 5px;
+  background-color: $amarillo-principal;
+  color: black;
+  padding: 5px;
+}
+
+section.productos {
+  display: grid;
+  grid-template-areas: "producto producto producto";
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  margin-top: 50px;
+
+  .producto {
+    background-color: $azul-claro;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+section.redes-sociales {
+  text-align: center;
+  margin-top: 50px;
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .redes-container {
+    display: flex;
+    justify-content: center;
+
+    .redes-icono {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: $azul-principal;
+      margin: 0 10px;
+      color: $blanco-principal;
+      font-size: 20px;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: darken($azul-principal, 10%);
+      }
+    }
+  }
+}
+
